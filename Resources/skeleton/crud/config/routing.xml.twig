@@ -15,7 +15,7 @@
 
 {% if 'new' in actions %}
     <route id="{{ route_name_prefix }}_new" path="/new">
-        <default key="_controller">{{ bundle }}:{{ entity }}:new</default>
+        <default key="_controller">{{ bundle }}:{{ entity }}:create</default>
     </route>
 
     <route id="{{ route_name_prefix }}_create" path="/create" methods="POST">
@@ -25,7 +25,7 @@
 
 {% if 'edit' in actions %}
     <route id="{{ route_name_prefix }}_edit" path="/{id}/edit">
-        <default key="_controller">{{ bundle }}:{{ entity }}:edit</default>
+        <default key="_controller">{{ bundle }}:{{ entity }}:update</default>
     </route>
 
     <route id="{{ route_name_prefix }}_update" path="/{id}/update" methods="POST|PUT">

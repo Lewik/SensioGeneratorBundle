@@ -6,8 +6,7 @@
 {% block phpdoc_method_annotations %}
 {% if 'annotation' == format %}
      * @Route("/", name="{{ route_name_prefix }}_create")
-     * @Method("POST")
-     * @Template("{{ bundle }}:{{ entity }}:new.html.twig")
+     * @Template("{{ bundle }}:{{ entity }}:create.html.twig")
 {% endif %}
 {% endblock phpdoc_method_annotations %}
      */
@@ -41,7 +40,7 @@
             'form'   => $form->createView(),
         );
 {% else %}
-        return $this->render('{{ bundle }}:{{ entity|replace({'\\': '/'}) }}:new.html.twig', array(
+        return $this->render('{{ bundle }}:{{ entity|replace({'\\': '/'}) }}:create.html.twig', array(
             '{{ entity_class|lower }}' => ${{ entity_class|lower }},
             'form'   => $form->createView(),
         ));

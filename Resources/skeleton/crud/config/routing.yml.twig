@@ -11,20 +11,15 @@
 {% endif %}
 
 {% if 'new' in actions %}
-{{ route_name_prefix }}_new:
-    path:     /new
-    defaults: { _controller: "{{ bundle }}:{{ entity }}:new" }
-
 {{ route_name_prefix }}_create:
     path:     /create
     defaults: { _controller: "{{ bundle }}:{{ entity }}:create" }
-    methods:  POST
 {% endif %}
 
 {% if 'edit' in actions %}
-{{ route_name_prefix }}_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "{{ bundle }}:{{ entity }}:edit" }
+{{ route_name_prefix }}_update:
+    path:     /{id}/update
+    defaults: { _controller: "{{ bundle }}:{{ entity }}:update" }
 
 {{ route_name_prefix }}_update:
     path:     /{id}/update

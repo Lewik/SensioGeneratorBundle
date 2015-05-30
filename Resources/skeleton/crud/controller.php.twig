@@ -42,7 +42,6 @@ class {{ entity_class }}Controller extends Controller
 
     {%- if 'new' in actions %}
         {%- include 'crud/actions/create.php.twig' %}
-        {%- include 'crud/actions/new.php.twig' %}
     {%- endif %}
 
     {%- if 'show' in actions %}
@@ -50,7 +49,6 @@ class {{ entity_class }}Controller extends Controller
     {%- endif %}
 
     {%- if 'edit' in actions %}
-        {%- include 'crud/actions/edit.php.twig' %}
         {%- include 'crud/actions/update.php.twig' %}
     {%- endif %}
 
